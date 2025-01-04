@@ -4,7 +4,6 @@ function CBILogoWhite({classNames = ''}) {
     return (
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
              x="0px" y="0px"
-             className={classNames ?? "w-[200px] md:w-[200px] lg:w-[200px]"}
              viewBox="0 0 211.8 181.4" style={{ enableBackground: "new 0 0 211.8 181.4" }} xml:space="preserve">
 <g>
 	<path d="M180.6,63.3c0,5-0.6,9.9-1.8,14.7c-6.9,28.4-32.3,48.4-61.5,48.5H69.6V95.3h47.7c12,0,22.9-6.7,28.4-17.3

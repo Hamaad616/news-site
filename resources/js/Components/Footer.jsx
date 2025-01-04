@@ -10,7 +10,7 @@ export const Footer = () => {
                 <div className="eMVRpx">
                     <div className="footer-logo items-center">
                         <div className="logo-col">
-                            <BlackLogo className="grid"/>
+                            {/*<BlackLogo className="grid"/>*/}
                         </div>
                         <div className="links-col">
                             <div className="flex lg:justify-end">
