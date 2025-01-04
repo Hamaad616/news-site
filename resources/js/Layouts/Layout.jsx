@@ -96,7 +96,7 @@ const Layout = ({ children, categories }) => {
                     </div>
 
                     <Link href="/" className="flex-shrink-0">
-                        <Logo classNames="h-12 w-auto"/>
+                            <Logo classNames="h-12 w-auto"/>
                     </Link>
 
                     <div className="hidden lg:flex space-x-4"></div>

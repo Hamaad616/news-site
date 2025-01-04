@@ -2,7 +2,7 @@ import React from "react";
 
 function CBILogoWhite({classNames = ''}) {
     return (
-        <svg className={ classNames ?? "w-[280px] md:w-[280px] lg:w-[280px]"} id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+        <svg className={ classNames ?? "w-[200px] md:w-[200px] lg:w-[200px]"} id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
             <path
                 d="M254.69,152.58a61.31,61.31,0,0,1-1.76,14.73,63.38,63.38,0,0,1-61.48,48.51H143.8V184.63h47.65a32,32,0,0,0,28.44-17.32,31.68,31.68,0,0,0,3.61-14.73,8.14,8.14,0,0,0,0-.86,31.23,31.23,0,0,0-4.55-15.6,32,32,0,0,0-27.47-15.6H74.11V89.33H191.45A62.89,62.89,0,0,1,233,104.93a63.57,63.57,0,0,1,19.52,31.19,61.57,61.57,0,0,1,2.16,15.6C254.69,152,254.69,152.29,254.69,152.58Z"/>
             <path
