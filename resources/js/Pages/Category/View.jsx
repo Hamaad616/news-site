@@ -7,7 +7,6 @@ const View = ({categories, category}) => {
     return (
         <Layout categories={categories}>
             <Head title={category.title}/>
-
         </Layout>
     )
 }

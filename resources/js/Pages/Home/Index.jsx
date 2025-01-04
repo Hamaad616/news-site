@@ -20,7 +20,7 @@ const Home = ({
     return (
         <Layout categories={categories}>
             <Head>
-                <title head-key="title">GCBI</title>
+                <title head-key="title">Home</title>
                 <meta head-key="description" name="description"
                       content="Latest News and Informatic Blogs about residenct citizenship by investment. Get latest immigration relevant news."/>
                 <link head-key="canonical" rel="canonical" href={route('home')}/>

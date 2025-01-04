@@ -86,7 +86,7 @@ const Layout = ({ children, categories }) => {
                             <span className="sr-only">Open main menu</span>
                             <MenuIcon aria-hidden="true" className="h-6 w-6"/>
                         </button>
-                        <button aria-label="Search GCBI" className="lg:hidden">
+                        <button aria-label="Search Pakistan Today" className="lg:hidden">
                             <svg
                                 viewBox="0 0 32 32"
                                 width="20"

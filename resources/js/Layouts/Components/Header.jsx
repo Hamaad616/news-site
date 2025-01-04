@@ -50,7 +50,7 @@ const Header = ({ header }) => {
                         >
                             <Package2 className="h-5 w-5 transition-all group-hover:scale-110" />
                             <span className="sr-only">
-                                GetCitizenshipByInvestment
+                                Pakistan Today
                             </span>
                         </Link>
                         <Link
