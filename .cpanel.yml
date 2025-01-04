@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/pakilgra/public_html/news-site
+    - export DEPLOYPATH=/home/pakilgra/public_html
     - /bin/cp -a * $DEPLOYPATH
