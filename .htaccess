@@ -18,7 +18,7 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
 
-    RewriteRule ^(.*)$ /public/$1 []
+    RewriteRule ^(.*)$ /$1 []
     #RewriteRule ^ index.php [L]
     RewriteRule ^(/)?$ index.php [L]
 </IfModule>
