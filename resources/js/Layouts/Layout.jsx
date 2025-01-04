@@ -1,16 +1,13 @@
-import React, {useEffect, useMemo, useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import axios from "axios";
-import {Link, router} from "@inertiajs/react";
+import {Link} from "@inertiajs/react";
 import Logo from "./logo/CBILogoWhite.jsx";
-import LogoBlack from "./logo/CBILogoBlack.jsx";
-import Dropdown from "../Pages/Home/Components/Dropdown";
 import {Footer} from "@/Components/Footer.jsx";
 import {
     ChartPieIcon, ChevronRightIcon,
     FingerprintIcon,
     Grid2x2Icon,
     MenuIcon,
-    PhoneIcon,
     PlusSquareIcon,
     RefreshCcwIcon, XIcon
 } from "lucide-react";

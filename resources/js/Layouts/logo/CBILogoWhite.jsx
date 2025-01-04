@@ -2,7 +2,7 @@ import React from "react";
 
 function CBILogoWhite({classNames = ''}) {
     return (
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+        <svg version="1.1" id="Layer_0" xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="0 0 360 360" style="enable-background:new 0 0 360 360;" xml:space="preserve"
              className={classNames ?? "w-20 md:w-[100] lg:w-[200px]"}
