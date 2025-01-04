@@ -154,10 +154,16 @@ export const Footer = () => {
                 <div className="container mx-auto px-4 ">
                     <p className="text-center">
                         &copy; 2024 <a target="_blank"
-                                       href="https://getcitizenshipbyinvestment.com">
-                        <span className="uppercase text-[#62aa57]">GetCitizenshipByInvestment</span>
+                                       href="https://pakistantoday24.com/">
+                        <span className="uppercase text-[#62aa57]">Pakistan Today</span>
                     </a>. All
                         rights reserved.
+                    </p>
+                    <p className="text-center">
+                        Developed By <a target="_blank"
+                                       href="mailto:hamaadkaleem89@gmail.com">
+                        <span className="uppercase text-[#62aa57]">Hamaad Kaleem</span>
+                    </a>
                     </p>
                 </div>
             </section>
