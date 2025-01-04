@@ -5,8 +5,6 @@ const Dropdown = forwardRef(({ category }, ref) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 
-    console.log(window.location.pathname)
-
     const toggleDropdown = () => setIsOpen(!isOpen);
 
     useEffect(() => {

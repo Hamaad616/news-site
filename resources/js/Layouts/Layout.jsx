@@ -58,7 +58,6 @@ const Layout = ({ children, categories }) => {
                 })
                 .catch(error => {
                     // setFetchingPosts(false)
-                    console.log(error)
                 })
         }
     }
