@@ -29,12 +29,12 @@ class HomeController extends Controller
             ->whereHas('category', function ($q) {
                 $q->where('slug', 'news');
             })
-            ->whereNotIn('id', [$featuredNews->id])
+            ->whereNotIn('id', [$featuredNews?->id])
             ->orderBy('created_at', 'DESC')
             ->take(4)
             ->get();
 
-        $exceptStories = array_merge($topStoriesIds, [$featuredNews->id]);
+        $exceptStories = array_merge($topStoriesIds, [$featuredNews?->id]);
 
         $moreNews = Post::with(['category', 'user'])
             ->whereHas('category', function ($q) {
