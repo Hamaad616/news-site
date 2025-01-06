@@ -47,7 +47,7 @@ class HomeController extends Controller
             ->skip(4)
             ->get();
 
-        $citizenshipCategory = Category::where('name', 'Sports')->first();
+        $citizenshipCategory = Category::where('name', 'Entertainment')->first();
         $citizenshipPosts = Post::where('category_id', $citizenshipCategory?->id)
             ->with(['category', 'user'])
             ->orderBy('created_at', 'desc')
