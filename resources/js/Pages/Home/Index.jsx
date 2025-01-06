@@ -354,7 +354,7 @@ const Home = ({
                                     <div>
                                         <div className="dqKfa">
                                             <h2 className="elqzuS">
-                                                From Residency
+                                                From Global
                                             </h2>
                                         </div>
                                     </div>
@@ -518,7 +518,7 @@ const Home = ({
                                 <div>
                                     <div className="dqKfa">
                                         <h2 className="elqzuS">
-                                            Digital Nomad
+                                            Entertainment
                                         </h2>
                                     </div>
                                 </div>
@@ -837,7 +837,7 @@ const Home = ({
                                         <div data-testid="section-title-wrapper" className="druAcw">
                                             <div>
                                                 <div className="dqKfa"><h2
-                                                    className="elqzuS">Skilled Immigration</h2>
+                                                    className="elqzuS">Sports</h2>
                                                 </div>
                                             </div>
                                         </div>
@@ -918,7 +918,7 @@ const Home = ({
                                         <div className="druAcw">
                                             <div>
                                                 <div className="dqKfa"><h2
-                                                    className="elqzuS">Business Immigration</h2>
+                                                    className="elqzuS">Business</h2>
                                                 </div>
                                             </div>
                                         </div>

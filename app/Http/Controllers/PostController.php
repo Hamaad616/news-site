@@ -123,7 +123,10 @@ class PostController extends Controller
             })
         ]);
 
-        Post::whereFeatured(true)->update(['featured' => false]);
+        if($request->featured)
+        {
+            Post::whereFeatured(true)->update(['featured' => false]);
+        }
 
         $post->update([
             'slug' => Str::slug($request->title),

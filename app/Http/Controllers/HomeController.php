@@ -14,26 +14,40 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Category::where('parent_id', 0)->with('children')->get();
-        $featuredNews = Post::whereFeatured(true)->with(['user', 'category'])->first();
+        $featuredNews = Post::whereFeatured(true)->latest()->with(['user', 'category'])->first();
+
+        $topStoriesIds = Post::with(['category', 'user'])
+            ->whereHas('category', function ($q) {
+                $q->where('slug', 'news');
+            })
+            ->orderBy('created_at', 'DESC')
+            ->take(4)
+            ->pluck('id')
+            ->toArray();
+
         $topStories = Post::with(['category', 'user'])
-        ->whereHas('category', function ($q){
-            $q->where('slug', 'immigration-news');
-        })
-        ->orderBy('created_at', 'DESC')
-        ->take(4)
-        ->get();
+            ->whereHas('category', function ($q) {
+                $q->where('slug', 'news');
+            })
+            ->whereNotIn('id', [$featuredNews->id])
+            ->orderBy('created_at', 'DESC')
+            ->take(4)
+            ->get();
+
+        $exceptStories = array_merge($topStoriesIds, [$featuredNews->id]);
 
         $moreNews = Post::with(['category', 'user'])
             ->whereHas('category', function ($q) {
-                $q->where('slug', 'immigration-news');
+                $q->where('slug', 'news');
             })
+            ->whereNotIn('id', $exceptStories)
             ->whereFeatured(false)
             ->orderBy('created_at', 'DESC')
             ->take(8)  // Take the next 8 posts (or however many you want)
             ->skip(4)
             ->get();
 
-        $citizenshipCategory = Category::where('name', 'Citizenship')->first();
+        $citizenshipCategory = Category::where('name', 'Sports')->first();
         $citizenshipPosts = Post::where('category_id', $citizenshipCategory?->id)
             ->with(['category', 'user'])
             ->orderBy('created_at', 'desc')
@@ -42,7 +56,7 @@ class HomeController extends Controller
 
         $residencePosts = Post::with(['category', 'user'])
             ->whereHas('category', function ($q) {
-                $q->where('slug', 'residency');
+                $q->where('slug', 'global');
             })
             ->orderBy('created_at', 'DESC')
             ->take(4)
@@ -50,7 +64,7 @@ class HomeController extends Controller
 
         $digitalNomad = Post::with(['category', 'user'])
             ->whereHas('category', function ($q) {
-                $q->where('slug', 'digital-nomad');
+                $q->where('slug', 'entertainment');
             })
             ->orderBy('created_at', 'DESC')
             ->take(8)
@@ -58,7 +72,7 @@ class HomeController extends Controller
 
         $skilledImmigrationPosts = Post::with(['category', 'user'])
             ->whereHas('category', function ($q) {
-                $q->where('slug', 'skilled-immigration');
+                $q->where('slug', 'sports');
             })
             ->orderBy('created_at', 'DESC')
             ->take(9)
@@ -66,7 +80,7 @@ class HomeController extends Controller
 
         $businessImmigrationPosts = Post::with(['category', 'user'])
             ->whereHas('category', function ($q) {
-                $q->where('slug', 'business-immigration');
+                $q->where('slug', 'business');
             })
             ->orderBy('created_at', 'DESC')
             ->take(9)
