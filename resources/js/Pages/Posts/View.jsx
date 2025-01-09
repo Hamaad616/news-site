@@ -47,7 +47,10 @@ const View = ({post, categories}) => {
                 {/* Open Graph (OG) Metadata */}
                 <meta head-key="og:title" property="og:title" content={post.title}/>
                 <meta head-key="og:description" property="og:description" content={post.description}/>
-                <meta head-key="og:image" property="og:image" content={route('storage.images', post.image)}/> {/* The URL to the post image */}
+                {
+                    post.image ? <meta head-key="og:image" property="og:image" content={route('storage.images', post.image)}/> : ""
+                }
+
                 <meta head-key="og:url" property="og:url" content={route('posts.show', [post.category.name, post.slug])}/>
                 <meta head-key="og:type" property="og:type" content="article"/>
                 <meta head-key="og:site_name" property="og:site_name" content="Pakistan Today"/>
@@ -56,8 +59,9 @@ const View = ({post, categories}) => {
                 <meta head-key="twitter:card" name="twitter:card" content="summary_large_image"/>
                 <meta head-key="twitter:title" name="twitter:title" content={post.title}/>
                 <meta head-key="twitter:description" name="twitter:description" content={post.description}/>
-                <meta head-key="twitter:image" name="twitter:image" content={route('storage.images', post.image)}/>
-
+                {
+                    post.image ? <meta head-key="twitter:image" property="twitter:image" content={route('storage.images', post.image)}/> : ""
+                }
                 {/* Google-Specific Metadata */}
                 {/*<meta head-key="google-site-verification" name="google-site-verification" content="PLACE_YOUR_GOOGLE_VERIFICATION_TOKEN_HERE" />*/}
                 {/*<meta head-key="keywords" name="keywords" content={`Pakistan, Today, ${post.title}, ${post.category.name}`}/>*/}
