@@ -85,41 +85,6 @@ const View = ({post, categories}) => {
                     content={`Pakistan, Today, ${post.title}, ${post.category.name}`}
                 />
 
-                {/* Google-Specific Metadata */}
-                <meta
-                    head-key="google-site-verification"
-                    name="google-site-verification"
-                    content={import.meta.env.VITE_GOOGLE_VERIFICATION_TOKEN}
-                /> {/* Replace `env('GOOGLE_VERIFICATION_TOKEN')` with actual token retrieval logic if needed */}
-
-                {/* Dynamic Keywords */}
-                <meta
-                    head-key="keywords"
-                    name="keywords"
-                    content={`Pakistan, Today, ${post.title}, ${post.category?.name}`}
-                />
-
-                {/* Article Metadata */}
-                <meta
-                    head-key="article-published_time"
-                    property="article:published_time"
-                    content={post.created_at}
-                />
-                <meta
-                    head-key="article-modified_time"
-                    property="article:modified_time"
-                    content={post.updated_at}
-                />
-                <meta
-                    head-key="article-author"
-                    property="article:author"
-                    content={post.user?.name}
-                />
-                <meta
-                    head-key="article-section"
-                    property="article:section"
-                    content={post.category?.name}
-                />
             </Head>
             <article>
                 {/* title block */}
