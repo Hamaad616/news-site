@@ -62,6 +62,10 @@
                 property="article:section"
                 content="{{$page['props']['post']['category']['name']}}"
             />
+            <meta
+                property="article:description"
+                content="{{$page['props']['post']['description']}}"
+            />
 
             <meta name="linkedin:title" content="{{ $page['props']['post']['title'] }}" />
             <meta name="linkedin:description" content="{{ $page['props']['post']['description'] }}"/>
