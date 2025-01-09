@@ -11,6 +11,7 @@
         @if(isset($page['props']['post']))
             <title>{{ $page['props']['post']['title'] }}</title>
             <meta name="description" content="{{ $page['props']['post']['description'] }}">
+            <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
             <!-- Open Graph / Facebook -->
             <meta property="og:type" content="website">
@@ -59,8 +60,9 @@
 
         @else
             <title>Home</title>
+            <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
             <meta name="description"
-                  content="The perfect place for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay updated on trending industry news."/>
+                  content="Pakistan Today: The ultimate hub for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay ahead with the latest industry trends."/>
             <meta
                 name="keywords"
                 content="Pakistan, Today, Pakistan Today, Pakistan Today 24, PakistanToday, PakistanToday24, Today24, Pakistan24, 24 news, Today 24 news"
@@ -71,13 +73,13 @@
             <meta property="og:type" content="website" />
             <meta property="og:url" content="{{route('home')}}" />
             <meta property="og:title" content="Pakistan Today" />
-            <meta property="og:description" content="The perfect place for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay updated on industry news." />
+            <meta property="og:description" content="Pakistan Today: The ultimate hub for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay ahead with the latest industry trends." />
             <meta property="og:image" content="{{route('favicon')}}" />
 
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url"  content="{{route('home')}}" />
             <meta property="twitter:title" content="Pakistan Today" />
-            <meta property="twitter:description" content="The perfect place for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay updated on industry news." />
+            <meta property="twitter:description" content="Pakistan Today: The ultimate hub for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay ahead with the latest industry trends." />
             <meta property="twitter:image" content="{{route('favicon')}}" />
 
             <meta
@@ -91,7 +93,6 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
         <!-- Scripts -->
