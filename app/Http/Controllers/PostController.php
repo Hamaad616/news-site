@@ -17,7 +17,7 @@ class PostController extends Controller
     public function index(){
         $posts = Auth::user()->posts()
             ->with('category')
-            ->select('id', 'slug' ,'title', 'description', 'category_id', 'content' ,'status') // Select necessary fields
+            ->select('id', 'slug' ,'title', 'description', 'category_id', 'content' ,'status')
             ->get() // Get the collection
             ->map(function($post) {
                 return [
@@ -233,10 +233,5 @@ class PostController extends Controller
         return response()->json([
             'posts' => $posts
         ]);
-    }
-
-    public function test()
-    {
-        return Inertia::render('Test');
     }
 }
