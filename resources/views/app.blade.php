@@ -22,14 +22,12 @@
                 <meta property="og:image" content="{{ $page['props']['post']['image'] }}">
             @endif
             <meta property="og:image:width" content="1200" />
-            <meta property="og:image:height" content="630" />
+            <meta property="og:image:height" content="627" />
             <meta property="og:type" content="article" />
-            @if($page['props']['post']['image'])
-                <meta
-                    property="og:url"
-                    content="{{route('posts.show', ['category' => $page['props']['post']['category']['name'], 'slug' => $page['props']['post']['slug']])}}"
-                />
-            @endif
+            <meta
+                property="og:url"
+                content="{{route('home')}}"
+            />
             <!-- Twitter -->
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:title" content="{{ $page['props']['post']['title'] }}">
@@ -71,12 +69,6 @@
                 property="article:description"
                 content="{{$page['props']['post']['description']}}"
             />
-
-            <meta name="linkedin:title" content="{{ $page['props']['post']['title'] }}" />
-            <meta name="linkedin:description" content="{{ $page['props']['post']['description'] }}"/>
-            @if($page['props']['post']['image'])
-             <meta name="linkedin:image" content="{{ $page['props']['post']['image'] }}" />
-            @endif
         @else
             <title>Home</title>
             <link rel="icon" href="{{asset('favicon')}}" type="image/x-icon" />
