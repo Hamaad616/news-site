@@ -14,10 +14,14 @@
             <meta name="description" content="{{ $page['props']['post']['description'] }}">
 
             <!-- Open Graph / Facebook -->
+            <meta property="og:site_name" content="Pakistan Today" />
             <meta property="og:type" content="website">
             <meta property="og:title" content="{{ $page['props']['post']['title'] }}">
             <meta property="og:description" content="{{ $page['props']['post']['description'] }}">
             <meta property="og:image" content="{{ $page['props']['post']['image'] }}">
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:type" content="article" />
             <meta
                 property="og:url"
                 content="{{route('posts.show', ['category' => $page['props']['post']['category']['name'], 'slug' => $page['props']['post']['slug']])}}"
@@ -30,6 +34,7 @@
             <meta name="twitter:image" content="{{ $page['props']['post']['image'] }}">
             <meta name="robots" content="index, follow" />
             <meta name="author" content="{{$page['props']['post']['user']['name']}}" />
+
 
             <meta
                 name="google-site-verification"
@@ -58,6 +63,10 @@
                 content="{{$page['props']['post']['category']['name']}}"
             />
 
+            <meta name="linkedin:title" content="{{ $page['props']['post']['title'] }}" />
+            <meta name="linkedin:description" content="{{ $page['props']['post']['description'] }}"/>
+            <meta name="linkedin:image" content="{{ $page['props']['post']['image'] }}" />
+
         @else
             <title>Home</title>
             <link rel="icon" href="{{asset('favicon')}}" type="image/x-icon" />
@@ -68,9 +77,11 @@
                 name="keywords"
                 content="Pakistan, Today, Pakistan Today, Pakistan Today 24, PakistanToday, PakistanToday24, Today24, Pakistan24, 24 news, Today 24 news"
             />
-
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
             <meta name="robots" content="index, follow"/>
 
+            <meta property="og:site_name" content="Pakistan Today" />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="{{route('home')}}" />
             <meta property="og:title" content="Pakistan Today" />
@@ -82,6 +93,8 @@
             <meta property="twitter:title" content="Pakistan Today" />
             <meta property="twitter:description" content="Pakistan Today: The ultimate hub for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay ahead with the latest industry trends." />
             <meta property="twitter:image" content="{{asset('favicon')}}" />
+
+
 
             <meta
                 name="google-site-verification"
