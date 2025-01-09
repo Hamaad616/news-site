@@ -124,7 +124,7 @@ class PostController extends Controller
                 return $request->has('category') && Category::where('slug', Str::slug($request->category))->count();
             })
         ]);
-
+        $post->load('user');
         if($request->featured)
         {
             Post::whereFeatured(true)->update(['featured' => false]);
