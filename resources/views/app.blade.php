@@ -18,7 +18,9 @@
             <meta property="og:type" content="website">
             <meta property="og:title" content="{{ $page['props']['post']['title'] }}">
             <meta property="og:description" content="{{ $page['props']['post']['description'] }}">
-            <meta property="og:image" content="{{ $page['props']['post']['image'] }}">
+            @if($page['props']['post']['image'])
+                <meta property="og:image" content="{{ $page['props']['post']['image'] }}">
+            @endif
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
             <meta property="og:type" content="article" />
