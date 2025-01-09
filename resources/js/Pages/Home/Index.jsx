@@ -20,7 +20,7 @@ const Home = ({
     return (
         <Layout categories={categories}>
             <Head>
-                <title head-key="title">Home</title>
+                <title>Home</title>
                 <meta head-key="description" name="description"
                       content="The perfect place for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay updated on trending industry news."/>
 
