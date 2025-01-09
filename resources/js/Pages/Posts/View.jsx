@@ -37,17 +37,6 @@ const View = ({post, categories}) => {
 
     return (
         <Layout categories={categories}>
-            {/*<Head>*/}
-            {/*  */}
-            {/*    /!* Google-Specific Metadata *!/*/}
-            {/*    /!*<meta head-key="google-site-verification" name="google-site-verification" content="PLACE_YOUR_GOOGLE_VERIFICATION_TOKEN_HERE" />*!/*/}
-            {/*    /!*<meta head-key="keywords" name="keywords" content={`Pakistan, Today, ${post.title}, ${post.category.name}`}/>*!/*/}
-            {/*    /!*<meta head-key="article:published_time" property="article:published_time" content={post.created_at}/>*!/*/}
-            {/*    /!*<meta head-key="article:modified_time" property="article:modified_time" content={post.updated_at}/>*!/*/}
-            {/*    /!*<meta head-key="article:author" property="article:author" content={post.user.name}/>*!/*/}
-            {/*    /!*<meta head-key="article:section" property="article:section" content={post.category.name}/>*!/*/}
-            {/*    /!*<meta head-key="article:tag" property="article:tag" content={post.tags}/> /!* Assuming "tags" are associated *!/*!/*/}
-            {/*</Head>*/}
             <Head>
                 <title>{post.title}</title>
 
