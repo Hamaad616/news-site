@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
         @inertiaHead
 
@@ -11,7 +12,6 @@
         @if(isset($page['props']['post']))
             <title>{{ $page['props']['post']['title'] }}</title>
             <meta name="description" content="{{ $page['props']['post']['description'] }}">
-            <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
             <!-- Open Graph / Facebook -->
             <meta property="og:type" content="website">
@@ -60,6 +60,8 @@
 
         @else
             <title>Home</title>
+            <link rel="icon" href="{{asset('favicon')}}" type="image/x-icon" />
+            <link rel="shortcut icon" href="{{asset('favicon')}}" type="image/x-icon" />
             <meta name="description"
                   content="Pakistan Today: The ultimate hub for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay ahead with the latest industry trends."/>
             <meta
@@ -73,20 +75,18 @@
             <meta property="og:url" content="{{route('home')}}" />
             <meta property="og:title" content="Pakistan Today" />
             <meta property="og:description" content="Pakistan Today: The ultimate hub for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay ahead with the latest industry trends." />
-            <meta property="og:image" content="{{route('favicon')}}" />
+            <meta property="og:image" content="{{asset('favicon')}}" />
 
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url"  content="{{route('home')}}" />
             <meta property="twitter:title" content="Pakistan Today" />
             <meta property="twitter:description" content="Pakistan Today: The ultimate hub for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay ahead with the latest industry trends." />
-            <meta property="twitter:image" content="{{route('favicon')}}" />
+            <meta property="twitter:image" content="{{asset('favicon')}}" />
 
             <meta
                 name="google-site-verification"
                 content="{{env('VITE_GOOGLE_VERIFICATION_TOKEN')}}"
             />
-
-
         @endif
 
         <!-- Fonts -->
