@@ -41,8 +41,8 @@ const View = ({post, categories}) => {
                 <title>{post.title}</title>
 
                 {/* Primary Meta Tags */}
-                <meta head-key="meta-title" name="title" content={post.title} />
-                <meta head-key="meta-description" name="description" content={post.description} />
+                <meta head-key="post-meta-title" name="title" content={post.title} />
+                <meta head-key="post-meta-description" name="description" content={post.description} />
 
                 {/* Open Graph / Facebook */}
                 <meta head-key="og-type" property="og:type" content="website" />
