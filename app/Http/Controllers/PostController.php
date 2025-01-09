@@ -129,6 +129,7 @@ class PostController extends Controller
         }
 
         $post->update([
+            'image' => $request->image ? route('storage.images', ['filename' => $request->image]) : "",
             'slug' => Str::slug($request->title),
             'title' => $request->title,
             'description' => $request->description,
