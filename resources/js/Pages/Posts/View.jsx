@@ -40,9 +40,32 @@ const View = ({post, categories}) => {
                 <title>{post.title}</title>
                 <meta head-key="title" name="title" content={post.title}/>
                 <meta head-key="description" name="description" content={post.description}/>
-                <meta head-key="robots" name="robots"
-                      content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
-                <meta head-key="author" name="author" content={post.user.name} />
+                <meta head-key="robots" name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+                <meta head-key="author" name="author" content={post.user.name}/>
+                <link head-key="canonical" rel="canonical" href={route('posts.show', [post.category.name, post.slug])}/>
+
+                {/* Open Graph (OG) Metadata */}
+                <meta head-key="og:title" property="og:title" content={post.title}/>
+                <meta head-key="og:description" property="og:description" content={post.description}/>
+                <meta head-key="og:image" property="og:image" content={route('storage.images', post.image)}/> {/* The URL to the post image */}
+                <meta head-key="og:url" property="og:url" content={route('posts.show', [post.category.name, post.slug])}/>
+                <meta head-key="og:type" property="og:type" content="article"/>
+                <meta head-key="og:site_name" property="og:site_name" content="Pakistan Today"/>
+
+                {/* Twitter Card Metadata */}
+                <meta head-key="twitter:card" name="twitter:card" content="summary_large_image"/>
+                <meta head-key="twitter:title" name="twitter:title" content={post.title}/>
+                <meta head-key="twitter:description" name="twitter:description" content={post.description}/>
+                <meta head-key="twitter:image" name="twitter:image" content={route('storage.images', post.image)}/>
+
+                {/* Google-Specific Metadata */}
+                {/*<meta head-key="google-site-verification" name="google-site-verification" content="PLACE_YOUR_GOOGLE_VERIFICATION_TOKEN_HERE" />*/}
+                {/*<meta head-key="keywords" name="keywords" content={`Pakistan, Today, ${post.title}, ${post.category.name}`}/>*/}
+                {/*<meta head-key="article:published_time" property="article:published_time" content={post.created_at}/>*/}
+                {/*<meta head-key="article:modified_time" property="article:modified_time" content={post.updated_at}/>*/}
+                {/*<meta head-key="article:author" property="article:author" content={post.user.name}/>*/}
+                {/*<meta head-key="article:section" property="article:section" content={post.category.name}/>*/}
+                {/*<meta head-key="article:tag" property="article:tag" content={post.tags}/> /!* Assuming "tags" are associated *!/*/}
             </Head>
 
             <article>

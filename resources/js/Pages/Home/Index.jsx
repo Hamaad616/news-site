@@ -22,7 +22,7 @@ const Home = ({
             <Head>
                 <title head-key="title">Home</title>
                 <meta head-key="description" name="description"
-                      content="The perfect place for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay updated on industry news."/>
+                      content="The perfect place for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay updated on trending industry news."/>
                 <link head-key="canonical" rel="canonical" href={route('home')}/>
                 <meta head-key="og:site_name" property="og:site_name" content={route('home')}/>
             </Head>
