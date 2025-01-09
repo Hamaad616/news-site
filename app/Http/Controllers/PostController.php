@@ -95,6 +95,7 @@ class PostController extends Controller
             'status' => $post->status,
             'featured' => $post->featured,
             'image' => $image,
+            'user' => $post->user,
             'category' => [
                 'id' => $post->category->parent ? $post->category->parent->id : $post->category->parent_id,
                 'name' => $post->category->parent ? $post->category->parent->name : $post->category->name
