@@ -711,10 +711,10 @@ const Home = ({
                                 <div className="sc-93223220-0 sc-b38350e4-2 cmkdDu QUMNJ">
                                     <div className="sc-b38350e4-3 gugNoq">
                                         {
-                                            digitalNomadPosts[1] ? (
-                                                <div key={digitalNomadPosts[1].id} data-testid="edinburgh-card">
+                                            digitalNomadPosts[0] ? (
+                                                <div key={digitalNomadPosts[0].id} data-testid="edinburgh-card">
                                                     <div data-testid="anchor-inner-wrapper">
-                                                        <a href={route('posts.show', [digitalNomadPosts[1].category.name, digitalNomadPosts[1].slug])}
+                                                        <a href={route('posts.show', [digitalNomadPosts[0].category.name, digitalNomadPosts[0].slug])}
                                                            data-testid="internal-link"
                                                            className="sc-2e6baa30-0 gILusN">
                                                             <div data-testid="edinburgh-article"
@@ -725,18 +725,18 @@ const Home = ({
                                                                          className="sc-b8778340-2 kUyIkJ">
                                                                         <div className="sc-a34861b-1 jxzoZC">
                                                                             <LazyLoadImage
-                                                                                title={digitalNomadPosts[1].title}
+                                                                                title={digitalNomadPosts[0].title}
                                                                                 sizes="(min-width: 768px) 33vw, 96vw"
                                                                                 srcSet={`${route('storage.images', digitalNomadPosts[1].image)} 240w,
-                                                                        ${route('storage.images', digitalNomadPosts[1].image)} 320w,
-                                                                        ${route('storage.images', digitalNomadPosts[1].image)} 480w,
-                                                                        ${route('storage.images', digitalNomadPosts[1].image)} 640w,
-                                                                        ${route('storage.images', digitalNomadPosts[1].image)} 800w,
-                                                                        ${route('storage.images', digitalNomadPosts[1].image)} 1024w,
-                                                                        ${route('storage.images', digitalNomadPosts[1].image)} 1536w`}
-                                                                                src={`${route('storage.images', digitalNomadPosts[1].image)}`}
+                                                                        ${route('storage.images', digitalNomadPosts[0].image)} 320w,
+                                                                        ${route('storage.images', digitalNomadPosts[0].image)} 480w,
+                                                                        ${route('storage.images', digitalNomadPosts[0].image)} 640w,
+                                                                        ${route('storage.images', digitalNomadPosts[0].image)} 800w,
+                                                                        ${route('storage.images', digitalNomadPosts[0].image)} 1024w,
+                                                                        ${route('storage.images', digitalNomadPosts[0].image)} 1536w`}
+                                                                                src={`${route('storage.images', digitalNomadPosts[0].image)}`}
                                                                                 loading="lazy"
-                                                                                alt={digitalNomadPosts[1].title}
+                                                                                alt={digitalNomadPosts[0].title}
                                                                                 className="sc-a34861b-0 efFcac"/></div>
                                                                     </div>
                                                                 </div>
@@ -745,18 +745,18 @@ const Home = ({
                                                                     <div className="sc-4fedabc7-1 kbvCmj">
                                                                         <div className="sc-4fedabc7-0 kZtaAl"><h2
                                                                             data-testid="card-headline"
-                                                                            className="sc-4fedabc7-3 zTZri">{digitalNomadPosts[1].title}</h2>
+                                                                            className="sc-4fedabc7-3 zTZri">{digitalNomadPosts[0].title}</h2>
                                                                         </div>
                                                                     </div>
                                                                     <p data-testid="card-description"
-                                                                       className="sc-b8778340-4 kYtujW">{digitalNomadPosts[1].description}</p>
+                                                                       className="sc-b8778340-4 kYtujW">{digitalNomadPosts[0].description}</p>
                                                                     <div className="sc-4e537b1-0 gtLVrL"><span
                                                                         data-testid="card-metadata-lastupdated"
-                                                                        className="sc-4e537b1-1 dsUUMv">{formatDateHumanReadable(digitalNomadPosts[1].created_at)}</span>
+                                                                        className="sc-4e537b1-1 dsUUMv">{formatDateHumanReadable(digitalNomadPosts[0].created_at)}</span>
                                                                         <div data-testid="card-metadata-separator"
                                                                              className="sc-4e537b1-3 lmDmEx"></div>
                                                                         <span data-testid="card-metadata-tag"
-                                                                              className="sc-4e537b1-2 eRsxHt">{digitalNomadPosts[1].user.name}</span>
+                                                                              className="sc-4e537b1-2 eRsxHt">{digitalNomadPosts[0].user.name}</span>
                                                                     </div>
                                                                 </div>
                                                             </div>

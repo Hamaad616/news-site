@@ -63,6 +63,7 @@ class HomeController extends Controller
             ->get();
 
         $digitalNomad = Post::with(['category', 'user'])
+            ->whereNotIn('id', $citizenshipPosts->pluck('id'))
             ->whereHas('category', function ($q) {
                 $q->where('slug', 'entertainment');
             })

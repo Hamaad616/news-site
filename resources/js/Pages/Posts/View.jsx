@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {Head, Link} from "@inertiajs/react";
 import Layout from "@/Layouts/Layout";
 import "../../../css/article.css"
+import {formatDateHumanReadable} from "@/Helpers/dateFormatHelper.js";
 
 const View = ({post, categories}) => {
     const [isPopoverOpen, setPopoverOpen] = useState(false); // State to manage popover visibility
@@ -81,7 +82,7 @@ const View = ({post, categories}) => {
                 <div data-component="byline-block" className="dlWCEZ">
                     <div data-testid="byline-new" className="sc-2b5e3b35-0 dWFSHg">
                         <div className="sc-2b5e3b35-1 jTEdni">
-                            <time className="sc-2b5e3b35-2 fkLXLN">6 hours ago</time>
+                            <time className="sc-2b5e3b35-2 fkLXLN">{formatDateHumanReadable(post.created_at)}</time>
                             <div className="sc-2b5e3b35-3 kZrEzh">
                                 <div data-testid="popoverWrapper" id="popover-wrapper"
                                      className={`sc-93f6dc26-1 fRrxoV`}>
