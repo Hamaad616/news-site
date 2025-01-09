@@ -34,7 +34,9 @@
             <meta name="twitter:card" content="summary_large_image">
             <meta name="twitter:title" content="{{ $page['props']['post']['title'] }}">
             <meta name="twitter:description" content="{{ $page['props']['post']['description'] }}">
+            @if($page['props']['post']['image'])
             <meta name="twitter:image" content="{{ $page['props']['post']['image'] }}">
+            @endif
             <meta name="robots" content="index, follow" />
             <meta name="author" content="{{$page['props']['post']['user']['name']}}" />
 
