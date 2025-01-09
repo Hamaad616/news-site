@@ -84,7 +84,7 @@ class PostController extends Controller
     public function show(Post $post){
         $categories = Category::where('parent_id', 0)->with('children')->get();
         $image = $post->image ? route('storage.images', ['filename' => $post->image]) : '';
-
+        $post->load('user');
         $post = [
             'id' => $post->id,
             'slug' => $post->slug,
