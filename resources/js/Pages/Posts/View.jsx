@@ -37,42 +37,101 @@ const View = ({post, categories}) => {
 
     return (
         <Layout categories={categories}>
+            {/*<Head>*/}
+            {/*  */}
+            {/*    /!* Google-Specific Metadata *!/*/}
+            {/*    /!*<meta head-key="google-site-verification" name="google-site-verification" content="PLACE_YOUR_GOOGLE_VERIFICATION_TOKEN_HERE" />*!/*/}
+            {/*    /!*<meta head-key="keywords" name="keywords" content={`Pakistan, Today, ${post.title}, ${post.category.name}`}/>*!/*/}
+            {/*    /!*<meta head-key="article:published_time" property="article:published_time" content={post.created_at}/>*!/*/}
+            {/*    /!*<meta head-key="article:modified_time" property="article:modified_time" content={post.updated_at}/>*!/*/}
+            {/*    /!*<meta head-key="article:author" property="article:author" content={post.user.name}/>*!/*/}
+            {/*    /!*<meta head-key="article:section" property="article:section" content={post.category.name}/>*!/*/}
+            {/*    /!*<meta head-key="article:tag" property="article:tag" content={post.tags}/> /!* Assuming "tags" are associated *!/*!/*/}
+            {/*</Head>*/}
             <Head>
                 <title>{post.title}</title>
-                <meta head-key="title" name="title" content={post.title}/>
-                <meta head-key="description" name="description" content={post.description}/>
-                <meta head-key="robots" name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
-                <meta head-key="author" name="author" content={post.user.name}/>
-                <link head-key="canonical" rel="canonical" href={route('posts.show', [post.category.name, post.slug])}/>
 
-                {/* Open Graph (OG) Metadata */}
-                <meta head-key="og:title" property="og:title" content={post.title}/>
-                <meta head-key="og:description" property="og:description" content={post.description}/>
-                {
-                    post.image ? <meta head-key="og:image" property="og:image" content={route('storage.images', post.image)}/> : ""
-                }
+                {/* Primary Meta Tags */}
+                <meta head-key="meta-title" name="title" content={post.title} />
+                <meta head-key="meta-description" name="description" content={post.description} />
 
-                <meta head-key="og:url" property="og:url" content={route('posts.show', [post.category.name, post.slug])}/>
-                <meta head-key="og:type" property="og:type" content="article"/>
-                <meta head-key="og:site_name" property="og:site_name" content="Pakistan Today"/>
+                {/* Open Graph / Facebook */}
+                <meta head-key="og-type" property="og:type" content="website" />
+                <meta
+                    head-key="og-url"
+                    property="og:url"
+                    content={route('posts.show', [post.category?.name, post.slug])}
+                />
+                <meta head-key="og-title" property="og:title" content={post.title} />
+                <meta head-key="og-description" property="og:description" content={post.description} />
+                <meta
+                    head-key="og-image"
+                    property="og:image"
+                    content={route('storage.images', post.image)}
+                />
 
-                {/* Twitter Card Metadata */}
-                <meta head-key="twitter:card" name="twitter:card" content="summary_large_image"/>
-                <meta head-key="twitter:title" name="twitter:title" content={post.title}/>
-                <meta head-key="twitter:description" name="twitter:description" content={post.description}/>
-                {
-                    post.image ? <meta head-key="twitter:image" property="twitter:image" content={route('storage.images', post.image)}/> : ""
-                }
+                {/* Twitter */}
+                <meta head-key="twitter-card" property="twitter:card" content="summary_large_image" />
+                <meta
+                    head-key="twitter-url"
+                    property="twitter:url"
+                    content={route('posts.show', [post.category?.name, post.slug])}
+                />
+                <meta head-key="twitter-title" property="twitter:title" content={post.title} />
+                <meta head-key="twitter-description" property="twitter:description" content={post.description} />
+                <meta
+                    head-key="twitter-image"
+                    property="twitter:image"
+                    content={route('storage.images', post.image)}
+                />
+
+                {/* Additional Metadata */}
+                <meta head-key="robots" name="robots" content="index, follow" />
+                <meta head-key="author" name="author" content={post.user?.name} />
+
+                {/* Add dynamic keywords for SEO */}
+                <meta
+                    head-key="keywords"
+                    name="keywords"
+                    content={`Pakistan, Today, ${post.title}, ${post.category.name}`}
+                />
+
                 {/* Google-Specific Metadata */}
-                {/*<meta head-key="google-site-verification" name="google-site-verification" content="PLACE_YOUR_GOOGLE_VERIFICATION_TOKEN_HERE" />*/}
-                {/*<meta head-key="keywords" name="keywords" content={`Pakistan, Today, ${post.title}, ${post.category.name}`}/>*/}
-                {/*<meta head-key="article:published_time" property="article:published_time" content={post.created_at}/>*/}
-                {/*<meta head-key="article:modified_time" property="article:modified_time" content={post.updated_at}/>*/}
-                {/*<meta head-key="article:author" property="article:author" content={post.user.name}/>*/}
-                {/*<meta head-key="article:section" property="article:section" content={post.category.name}/>*/}
-                {/*<meta head-key="article:tag" property="article:tag" content={post.tags}/> /!* Assuming "tags" are associated *!/*/}
-            </Head>
+                <meta
+                    head-key="google-site-verification"
+                    name="google-site-verification"
+                    content={import.meta.env.VITE_GOOGLE_VERIFICATION_TOKEN}
+                /> {/* Replace `env('GOOGLE_VERIFICATION_TOKEN')` with actual token retrieval logic if needed */}
 
+                {/* Dynamic Keywords */}
+                <meta
+                    head-key="keywords"
+                    name="keywords"
+                    content={`Pakistan, Today, ${post.title}, ${post.category?.name}`}
+                />
+
+                {/* Article Metadata */}
+                <meta
+                    head-key="article-published_time"
+                    property="article:published_time"
+                    content={post.created_at}
+                />
+                <meta
+                    head-key="article-modified_time"
+                    property="article:modified_time"
+                    content={post.updated_at}
+                />
+                <meta
+                    head-key="article-author"
+                    property="article:author"
+                    content={post.user?.name}
+                />
+                <meta
+                    head-key="article-section"
+                    property="article:section"
+                    content={post.category?.name}
+                />
+            </Head>
             <article>
                 {/* title block */}
                 <div className="sc-18fde0d6-0 eeiVGB">

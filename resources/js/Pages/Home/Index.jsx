@@ -24,12 +24,8 @@ const Home = ({
                 <meta head-key="description" name="description"
                       content="The perfect place for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay updated on trending industry news."/>
 
-                <link head-key="canonical" rel="canonical" href={route('home')}/>
-
-                <meta head-key="og:site_name" property="og:site_name" content={route('home')}/>
                 <meta head-key="keywords" name="keywords"
                       content="Pakistan, Today, Pakistan Today, Pakistan Today 24, 24 news, Today 24 news, PakistanToday, PakistanToday24"/>
-                <meta head-key="Content-Type" http-equiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta head-key="robots" name="robots" content="index, follow"/>
 
                 <meta property="og:type" content="website" head-key="og-type" />
@@ -43,7 +39,6 @@ const Home = ({
                 <meta property="twitter:title" content="Pakistan Today" head-key="twitter-title" />
                 <meta property="twitter:description" content="The perfect place for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay updated on industry news." head-key="twitter-description" />
                 <meta property="twitter:image" content={route('favicon')} head-key="twitter-image" />
-
             </Head>
 
             <div className="">
