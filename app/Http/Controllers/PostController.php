@@ -104,7 +104,9 @@ class PostController extends Controller
                 'id' => $post->category->id,
                 'name' => $post->category->name
             ],
-            'subcategories' => $post->category?->parent?->children
+            'subcategories' => $post->category?->parent?->children,
+            'created_at' => $post->created_at,
+            'updated_at' => $post->updated_at
         ];
 
         return Inertia::render('Posts/Post', [
