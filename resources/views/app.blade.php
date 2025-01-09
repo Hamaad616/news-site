@@ -60,7 +60,6 @@
 
         @else
             <title>Home</title>
-            <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
             <meta name="description"
                   content="Pakistan Today: The ultimate hub for entrepreneurs, mentors, and investors to connect, exchange ideas, and stay ahead with the latest industry trends."/>
             <meta
