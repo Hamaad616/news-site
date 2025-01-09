@@ -42,8 +42,8 @@ class HomeController extends Controller
             })
             ->whereNotIn('id', $exceptStories)
             ->whereFeatured(false)
-            ->orderBy('created_at', 'DESC')
-            ->take(8)  // Take the next 8 posts (or however many you want)
+            ->latest()
+            ->take(8)
             ->skip(4)
             ->get();
 
@@ -59,7 +59,7 @@ class HomeController extends Controller
                 $q->where('slug', 'global');
             })
             ->orderBy('created_at', 'DESC')
-            ->take(4)
+            ->take(5)
             ->get();
 
         $digitalNomad = Post::with(['category', 'user'])

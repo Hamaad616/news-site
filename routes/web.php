@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Storage;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/admin', function () {
+    return redirect()->route('admin.dashboard');
+});
+
 Route::middleware(['auth'])->prefix('/admin')->group(function() {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
