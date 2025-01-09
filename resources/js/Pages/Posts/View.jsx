@@ -37,55 +37,7 @@ const View = ({post, categories}) => {
 
     return (
         <Layout categories={categories}>
-            <Head>
-                <title>{post.title}</title>
 
-                {/* Primary Meta Tags */}
-                <meta head-key="post-meta-title" name="title" content={post.title} />
-                <meta head-key="post-meta-description" name="description" content={post.description} />
-
-                {/* Open Graph / Facebook */}
-                <meta head-key="og-type" property="og:type" content="website" />
-                <meta
-                    head-key="og-url"
-                    property="og:url"
-                    content={route('posts.show', [post.category?.name, post.slug])}
-                />
-                <meta head-key="og-title" property="og:title" content={post.title} />
-                <meta head-key="og-description" property="og:description" content={post.description} />
-                <meta
-                    head-key="og-image"
-                    property="og:image"
-                    content={route('storage.images', post.image)}
-                />
-
-                {/* Twitter */}
-                <meta head-key="twitter-card" property="twitter:card" content="summary_large_image" />
-                <meta
-                    head-key="twitter-url"
-                    property="twitter:url"
-                    content={route('posts.show', [post.category?.name, post.slug])}
-                />
-                <meta head-key="twitter-title" property="twitter:title" content={post.title} />
-                <meta head-key="twitter-description" property="twitter:description" content={post.description} />
-                <meta
-                    head-key="twitter-image"
-                    property="twitter:image"
-                    content={route('storage.images', post.image)}
-                />
-
-                {/* Additional Metadata */}
-                <meta head-key="robots" name="robots" content="index, follow" />
-                <meta head-key="author" name="author" content={post.user?.name} />
-
-                {/* Add dynamic keywords for SEO */}
-                <meta
-                    head-key="keywords"
-                    name="keywords"
-                    content={`Pakistan, Today, ${post.title}, ${post.category.name}`}
-                />
-
-            </Head>
             <article>
                 {/* title block */}
                 <div className="sc-18fde0d6-0 eeiVGB">

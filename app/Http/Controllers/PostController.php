@@ -209,7 +209,8 @@ class PostController extends Controller
                 'name' => $post->user->name,
                 'email' => $post->user->email
             ],
-            'created_at' => $post->created_at
+            'created_at' => $post->created_at,
+            'updated_at' => $post->updated_at,
         ];
 
         return Inertia::render("Posts/View", [
