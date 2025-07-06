@@ -153,12 +153,6 @@ export const Footer = () => {
                     </a>. All
                         rights reserved.
                     </p>
-                    <p className="text-center">
-                        Developed By <a target="_blank"
-                                       href="https://www.linkedin.com/in/hamaad-kaleem-584a52207/">
-                        <span className="uppercase text-[#62aa57]">Hamaad Kaleem</span>
-                    </a>
-                    </p>
                 </div>
             </section>
         </footer>
